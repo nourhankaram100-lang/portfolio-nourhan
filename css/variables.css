@@ -1,0 +1,90 @@
+/* =====================================================
+   VARIABLES.CSS
+   كل ألوان وقيم التصميم متجمعة هنا كـ CSS Custom Properties
+   عايز تغيّر أي لون أو مسافة؟ غيّرها من هنا وهتتغير في الموقع كله
+   ===================================================== */
+
+:root {
+  /* ---------- Backgrounds ---------- */
+  --bg-body: #0b0f0e;
+  --bg-nav: rgba(11, 15, 14, 0.75);
+  --bg-card: #202522;
+  --bg-card-soft: #262b27;
+  --bg-code-card: #171b18;
+  --border-subtle: rgba(232, 232, 227, 0.08);
+  --border-strong: rgba(232, 232, 227, 0.16);
+
+  /* ---------- Text ---------- */
+  --text-primary: #e8e8e3;
+  --text-secondary: #9da096;
+  --text-muted: #6c6f66;
+
+  /* ---------- Brand accent colors ----------
+     Cosmic Lime palette: Electric Lime + Violet
+     (--accent-pink, --accent-blue and --accent-cyan are kept as
+     variable names so the rest of the CSS doesn't need to change —
+     they now simply point at the lime accent) */
+  --accent-purple: #8b5cf6;
+  --accent-purple-light: #a78bfa;
+  --accent-pink: #d7ff4f;
+  --accent-blue: #d7ff4f;
+  --accent-cyan: #d7ff4f;
+
+  /* ---------- Gradients ---------- */
+  --gradient-brand: linear-gradient(90deg, var(--accent-purple) 0%, var(--accent-cyan) 100%);
+  --gradient-text: linear-gradient(90deg, var(--accent-purple-light) 0%, var(--accent-cyan) 100%);
+  --gradient-ring: conic-gradient(from 210deg, var(--accent-purple), var(--accent-cyan) 50%, var(--accent-purple) 100%);
+
+  /* Text color to place on top of bright accent-filled buttons/badges
+     so it stays readable against the lime portion of the gradient */
+  --on-accent: #0b0f0e;
+
+  /* ---------- Glow / shadows ---------- */
+  --glow-purple: 0 0 50px rgba(139, 92, 246, 0.35);
+  --glow-cyan: 0 0 45px rgba(215, 255, 79, 0.28);
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.4);
+
+  /* ---------- Radius ---------- */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-xl: 32px;
+  --radius-pill: 999px;
+
+  /* ---------- Fonts ---------- */
+  --font-en: "Poppins", "Space Grotesk", sans-serif;
+  --font-ar: "Tajawal", "Cairo", sans-serif;
+  --font-code: "Fira Code", "JetBrains Mono", monospace;
+
+  /* ---------- Layout ---------- */
+  --container-max: 1280px;
+  --nav-height: 84px;
+}
+
+/* ================= LIGHT MODE OVERRIDES ================= */
+[data-theme="light"] {
+  --bg-body: #f4f6ee;
+  --bg-nav: rgba(244, 246, 238, 0.75);
+  --bg-card: #ffffff;
+  --bg-card-soft: #edf0e3;
+  --bg-code-card: #ffffff;
+  --border-subtle: rgba(11, 15, 14, 0.08);
+  --border-strong: rgba(11, 15, 14, 0.14);
+
+  --text-primary: #10130f;
+  --text-secondary: #4a4d44;
+  --text-muted: #75786d;
+
+  --on-accent: #0b0f0e;
+
+  /* Deeper lime for light mode: keeps the same hue family but stays
+     readable as text/icon color against a light background (the vivid
+     Electric Lime is reserved for dark-mode glows/backgrounds) */
+  --accent-pink: #5c6e10;
+  --accent-blue: #5c6e10;
+  --accent-cyan: #5c6e10;
+
+  --glow-purple: 0 0 35px rgba(139, 92, 246, 0.2);
+  --glow-cyan: 0 0 35px rgba(163, 196, 20, 0.25);
+  --shadow-card: 0 10px 30px rgba(20, 25, 10, 0.08);
+}
